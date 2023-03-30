@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    border-radius: 8px;
+    background: teal;
+    width: 450px;
+    height: 300px;
+
+}
+
+#btn{
+    background: rgb(90, 89, 89);
+    border-radius: 100%;
+    border: 2px solid black;
+    box-shadow: 0 1px 2px 0 rgb(37, 37, 37);
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    padding: 5px;
+}
+
+#demo{
+    position: relative;
+    padding: .625rem;
+    width: 6.25rem;
+    height: .5rem;
+    place-items: center;
+    font-size: .875rem;
+    bottom: 8px;
+}
+
+.token{
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    display: flex;
+    padding: .9375rem;
+    height: 3.75rem;
+    width: 11.25rem;
+    border: 1px solid black;
+    border-radius: 12px;
+    box-shadow: 0 5px 4px 3px black;
+    background: red;
+    align-items: center;
+}
+
+.digits_div{
+    background: rgb(202, 241, 26);
+    box-shadow: inset 3px  2px 0 0   rgb(63, 59, 59);
+    position: relative;
+    color: #000000;
+    border-radius: 3px;
+    font-weight: bolder;
+    bottom: -5px;
+    right: -12px;
+    height: 21px;
+    width:91px ;
+}
+
+.digits_div h5{
+    position: absolute;
+    color: white;
+    bottom: 23px;
+}
