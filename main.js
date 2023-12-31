@@ -1,18 +1,24 @@
+let intervalId; // To hold the interval ID
 
+function generateOTP() {
+  clearInterval(intervalId); // Clear any existing intervals before starting a new one
 
+  const digits = '0123456789';
+  let OTP = '';
 
-
-function generateOTP() {  // Using the button "onclick()" as the parent body for the OTP generating and rendering on p-tage with id="demo"
-var digits = '0123456789';  // Used an alphanuemric values to pick from
-let OTP = '';  // The generated otp value stays in btw the quote.
-
-  for (let i = 0; i < 8; i++ ){     // function that generate 8 value OTP
-   OTP += digits[Math.floor(Math.random() * 10)];
+  for (let i = 0; i < 8; i++) {
+    OTP += digits[Math.floor(Math.random() * 10)];
   }
 
-let token = document.getElementById("demo");  // Using DOM to append the generated otp value to the OTP Veriable on line 7 above 
-token.innerHTML = OTP;
+  const token = document.getElementById("demo");
+  token.innerHTML = OTP;
 
+  // Set an interval to clear the OTP after 8 seconds
+  intervalId = setInterval(() => {
+    token.innerHTML = ''; // Clear the OTP after 8 seconds
+    clearInterval(intervalId); // Stop the interval after clearing the OTP
+  }, 8000); // 8000 milliseconds = 8 seconds
 }
+
 
 
