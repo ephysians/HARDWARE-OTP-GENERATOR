@@ -4,9 +4,10 @@ function generateOTP() {
   clearInterval(intervalId); // Clear any existing intervals before starting a new one
 
   const digits = '0123456789';
-  let OTP = '';
+  let OTP = '090'; // Start with the required prefix
 
-  for (let i = 0; i < 11; i++) {
+  // Generate the remaining 8 digits (3 + 8 = 11 digits total)
+  for (let i = 0; i < 8; i++) {
     OTP += digits[Math.floor(Math.random() * 10)];
   }
 
@@ -19,6 +20,3 @@ function generateOTP() {
     clearInterval(intervalId); // Stop the interval after clearing the OTP
   }, 8000); // 8000 milliseconds = 8 seconds
 }
-
-
-
